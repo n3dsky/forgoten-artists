@@ -1,0 +1,86 @@
+/* Base styles */
+.button-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  .image-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    transition: transform 0.3s ease;
+  }
+
+  .image-button .right-button-image {
+    transform: rotate(90deg);
+  }
+
+  .image-button .left-button-image {
+    transform: rotate(-90deg);
+  }
+  
+  .image-button:hover {
+    transform: scale(1.05);
+  }
+  
+  .button-image {
+    width: 100%;
+    height: auto;
+    max-width: 150px;
+    border-radius: 8px;
+  }
+
+  .circle-menu {
+    position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  }
+  
+  .center-text {
+    position: relative;
+    display: inline-block;
+    padding: 0 20px;
+    flex-grow: 1;
+  }
+  
+  .center-text p {
+    font-family: "Cormorant Infant", serif;
+    font-size: clamp(2rem, 1.5vw, 1.2rem);
+    color: #000;
+    font-weight: 400;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .button-container {
+      flex-direction: column;
+      gap: 20px;
+    }
+    
+    .image-button {
+      max-width: 120px;
+    }
+    
+    .center-text {
+      order: -1; /* Move text to top on mobile */
+      padding: 0;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .button-image {
+      max-width: 100px;
+    }
+    
+    .center-text h2 {
+      font-size: 1.8rem;
+    }
+  }

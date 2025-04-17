@@ -1,10 +1,11 @@
 import logo from './logo.svg';
 import './App.css';
+import Landing from './Landing/Landing.jsx';
 
 function App() {
   return (
     <div className="App">
-      <h1>Forgotten artists blank page</h1>
+      <Landing />
     </div>
   );
 }

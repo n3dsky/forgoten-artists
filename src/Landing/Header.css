@@ -7,36 +7,18 @@
     position: relative;
 }
 
-.header .frame {
-    align-items: center;
-    display: flex;
-    gap: 5vw; /* Using viewport units for responsive gaps */
-    justify-content: center;
-    position: relative;
-    width: 80%; /* Percentage-based width */
-    margin: 0 auto; /* Center the frame */
-    padding: 0.7rem 0; /* Relative padding */
-    top: 0; /* Remove fixed positioning */
-    left: 0; /* Remove fixed positioning */
+.header .upper_ellipse {
+    position: absolute;
+    z-index: 1;
 }
 
-.header .element-wrapper,
 .header .div-wrapper {
+    z-index: 2;
     align-items: center;
     display: inline-flex;
     gap: 0.6rem; /* Using rem for scalable gaps */
     justify-content: center;
     position: relative;
-}
-
-.header .element {
-    color: #000000;
-    font-family: "Cormorant Infant", serif;
-    font-size: clamp(1.25rem, 2vw, 2rem); /* Responsive font sizing */
-    font-weight: 400;
-    letter-spacing: 0;
-    line-height: 1.2;
-    white-space: nowrap;
 }
 
 .header .text-wrapper {

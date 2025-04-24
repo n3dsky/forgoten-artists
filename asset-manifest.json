@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/forgoten-artists/static/css/main.3576089f.css",
-    "main.js": "/forgoten-artists/static/js/main.64f8e36f.js",
+    "main.js": "/forgoten-artists/static/js/main.42872dbb.js",
     "static/js/453.605784d4.chunk.js": "/forgoten-artists/static/js/453.605784d4.chunk.js",
     "static/media/div3.png": "/forgoten-artists/static/media/div3.1075f72ad1f5c7222346.png",
     "static/media/rectangle-150.png": "/forgoten-artists/static/media/rectangle-150.10d6fbc1da93b66b8799.png",
@@ -19,11 +19,11 @@
     "static/media/slick.woff": "/forgoten-artists/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/forgoten-artists/index.html",
     "main.3576089f.css.map": "/forgoten-artists/static/css/main.3576089f.css.map",
-    "main.64f8e36f.js.map": "/forgoten-artists/static/js/main.64f8e36f.js.map",
+    "main.42872dbb.js.map": "/forgoten-artists/static/js/main.42872dbb.js.map",
     "453.605784d4.chunk.js.map": "/forgoten-artists/static/js/453.605784d4.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.3576089f.css",
-    "static/js/main.64f8e36f.js"
+    "static/js/main.42872dbb.js"
   ]
 }

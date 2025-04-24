@@ -1,29 +1,33 @@
 {
   "files": {
-    "main.css": "/forgoten-artists/static/css/main.3576089f.css",
-    "main.js": "/forgoten-artists/static/js/main.42872dbb.js",
+    "main.css": "/forgoten-artists/static/css/main.ac84d097.css",
+    "main.js": "/forgoten-artists/static/js/main.3b8aa01b.js",
     "static/js/453.605784d4.chunk.js": "/forgoten-artists/static/js/453.605784d4.chunk.js",
     "static/media/div3.png": "/forgoten-artists/static/media/div3.1075f72ad1f5c7222346.png",
     "static/media/rectangle-150.png": "/forgoten-artists/static/media/rectangle-150.10d6fbc1da93b66b8799.png",
+    "static/media/layer.png": "/forgoten-artists/static/media/layer.5454c93e37bf692c0fd5.png",
     "static/media/mast.png": "/forgoten-artists/static/media/mast.846a0b3e33a6f0e9e73d.png",
     "static/media/rectangle-200.png": "/forgoten-artists/static/media/rectangle-200.6539f5e6b2b4138984a3.png",
     "static/media/rectangle-180.png": "/forgoten-artists/static/media/rectangle-180.f658c32f76fe90abb7af.png",
     "static/media/rectangle-190.png": "/forgoten-artists/static/media/rectangle-190.f1cf41323bfdd19149c9.png",
     "static/media/Volkov.jpg": "/forgoten-artists/static/media/Volkov.ec32dd9d804879696a85.jpg",
     "static/media/bytovoy.jpg": "/forgoten-artists/static/media/bytovoy.2504ab17ea839a48741b.jpg",
+    "static/media/natural.jpg": "/forgoten-artists/static/media/natural.dd72393931fcae07df76.jpg",
     "static/media/rectangle-160.png": "/forgoten-artists/static/media/rectangle-160.1617e82918ece4cacef5.png",
+    "static/media/history.jpg": "/forgoten-artists/static/media/history.bc650c8fd8a6b244cff1.jpg",
+    "static/media/portret.jpg": "/forgoten-artists/static/media/portret.bb15fed1ad9fb981eb57.jpg",
     "static/media/rectangle-170.png": "/forgoten-artists/static/media/rectangle-170.ba9e51578224d46cb1ec.png",
     "static/media/slick.svg": "/forgoten-artists/static/media/slick.2630a3e3eab21c607e21.svg",
     "static/media/slick.eot": "/forgoten-artists/static/media/slick.a4e97f5a2a64f0ab1323.eot",
     "static/media/slick.ttf": "/forgoten-artists/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/forgoten-artists/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/forgoten-artists/index.html",
-    "main.3576089f.css.map": "/forgoten-artists/static/css/main.3576089f.css.map",
-    "main.42872dbb.js.map": "/forgoten-artists/static/js/main.42872dbb.js.map",
+    "main.ac84d097.css.map": "/forgoten-artists/static/css/main.ac84d097.css.map",
+    "main.3b8aa01b.js.map": "/forgoten-artists/static/js/main.3b8aa01b.js.map",
     "453.605784d4.chunk.js.map": "/forgoten-artists/static/js/453.605784d4.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.3576089f.css",
-    "static/js/main.42872dbb.js"
+    "static/css/main.ac84d097.css",
+    "static/js/main.3b8aa01b.js"
   ]
 }

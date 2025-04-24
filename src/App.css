@@ -2,6 +2,9 @@
 
 .App {
   text-align: center;
+  background-color: #F3EFE2;
+  height: 100vw;
+  width: 100vw;
 }
 
 body {
@@ -20,3 +23,19 @@ body {
   	--color-black: #000;
   	
 }
+
+*, *::before, *::after {
+	box-sizing: inherit;
+  }
+  
+  html {
+	/* this makes sure the padding and the border is included in the box sizing */
+	box-sizing: border-box;
+	overflow-y: hidden;
+  }
+  
+  html body {
+	padding: 0;
+	margin: 0;
+	overflow-y: inherit;
+  }

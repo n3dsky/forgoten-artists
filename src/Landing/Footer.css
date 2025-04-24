@@ -25,7 +25,10 @@
   .lower_ellipse {
     z-index: 1;
     position: absolute;
-    top: -35%;
+    top: -25%;
+    width: 100vw;
+    height: auto;
+    width: 100%;
   }
 
   .image-button {
@@ -37,11 +40,11 @@
   }
 
   .image-button .right-button-image {
-    transform: rotate(90deg);
+    transform: rotate(90deg) scale(200%);
   }
 
   .image-button .left-button-image {
-    transform: rotate(-90deg);
+    transform: rotate(-90deg) scale(200%);
   }
   
   .image-button:hover {
@@ -59,8 +62,8 @@
     position: absolute;
     width: 642px;
     height: 642px;
-    right: 155px;
-    top: -60%;
+    right: 23%;
+    top: -40%;
     transform: translateY(-50%);
     z-index: 100;
   }
@@ -68,10 +71,7 @@
   .center-text {
     width: 100%;
     height: 100%;
-    position: relative;
-    display: inline-block;
     overflow: hidden;
-    padding: 0 20px;
     flex-grow: 1;
   }
   

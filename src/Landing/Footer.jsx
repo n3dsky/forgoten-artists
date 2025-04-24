@@ -1,19 +1,31 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Footer.css';
 import mast from './images/mast.png'
 import ReactCurvedText from 'react-curved-text';
 import lower_ellipse from './images/Ellipse_down.png'
 
-const Footer = () => {
+const Footer = ({sliderRef}) => {
+  const rotations = [43, -39, -98, -165, -236];
+  const [rotation, setRotation] = useState(43);
+  const [indexRotation, setIndexRotation] = useState(0);
+
   const handleLeftClick = () => {
-    console.log('Left button clicked');
-    // Add your left button click logic here
+    let nextIndex = indexRotation - 1 < 0 ? 4 : indexRotation - 1;
+    let diff = Math.abs(((rotations[indexRotation] - rotations[nextIndex] + 180) % 360 + 360) % 360 - 180);
+    setRotation(rotation + diff);
+    setIndexRotation(nextIndex);
+    sliderRef.current.slickPrev();
   };
 
   const handleRightClick = () => {
-    console.log('Right button clicked');
-    // Add your right button click logic here
+    let nextIndex = indexRotation + 1 > 4 ? 0 : indexRotation + 1;
+    let diff = Math.abs(((rotations[indexRotation] - rotations[nextIndex] + 180) % 360 + 360) % 360 - 180);
+    setRotation(rotation - diff);
+    setIndexRotation(nextIndex);
+    sliderRef.current.slickNext();
   };
+
+  const angles = [44];
 
   return (
     <div className="button-container">
@@ -42,7 +54,7 @@ const Footer = () => {
             textProps={{"style": {"fontSize": "42", "fontFamily": "Cormorant Infant, serif"}}}
             textPathProps={null}
             tspanProps={{"dy": "-60"}}
-            svgProps={{className: "circle-menu", "style": {"transform": "rotate(44deg)"}}} 
+            svgProps={{className: "circle-menu", "style": {"transform": `rotate(${rotation}deg)`, "transition": "transform 1.2s ease-in-out"}}} 
           />
         </div>
         

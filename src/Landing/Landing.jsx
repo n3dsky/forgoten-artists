@@ -1,18 +1,22 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import Header from './Header.jsx';
 import Footer from './Footer.jsx';
 import ArtistsSwiper from './ArtistsSwiper.jsx';
 
-import porn from './images/Ellipse_up.png'
-import CircleMenu from './CircleMenu.jsx';
+import layer from './images/layer.png'
+
+
+import './Landing.css'
 
 const Landing = () => {
+  const sliderRef = useRef(null);
+
   return (
-    <div>
+    <div className='landing'>
+      <img className='layer' src={layer} />
     <Header />
-    <ArtistsSwiper />
-    {/* <CircleMenu /> */}
-    <Footer />
+    <ArtistsSwiper ref={sliderRef}/>
+    <Footer sliderRef={sliderRef}/>
     </div>
   );
 };

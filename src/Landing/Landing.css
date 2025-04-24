@@ -1,0 +1,17 @@
+.layer {
+    width: 1905.12px;
+  height: 911px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  object-fit: cover;
+  aspect-ratio: 1905.12/911;
+  pointer-events: none;
+  opacity: 15%;
+  z-index: 101;
+}
+
+.landing {
+    width: 100vw;
+    height: auto;
+}

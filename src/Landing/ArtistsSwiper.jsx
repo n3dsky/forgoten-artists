@@ -1,42 +1,42 @@
-import React from "react";
+import React, { forwardRef } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-import blank1 from './images/blank.png'
-import blank2 from './images/blank.png'
-import blank3 from './images/blank.png'
-import blank4 from './images/blank.png'
+import history from './images/history.jpg'
+import natural from './images/natural.jpg'
+import portret from './images/portret.jpg'
+import bytovoy from './images/bytovoy.jpg'
 import volkov from './images/Volkov.jpg'
 
-const SimpleSlider = () => {
+const SimpleSlider = forwardRef((props, ref) => {
     const settings = {
         infinite: true,
-        speed: 500,
+        speed: 1200,
         slidesToShow: 1,
         slidesToScroll: 1,
         centerMode: true, // Включаем режим центрального слайда
-        centerPadding: "60px", // Отступ по бокам от центрального слайда
         variableWidth: true // Разрешаем переменную ширину слайдов
       };
 
   // Массив с путями к изображениям (замените на свои)
   const images = [
+    history,
+    bytovoy,
     volkov,
-    blank1,
-    blank1,
-    blank1,
-    blank1,
+    natural,
+    portret,
   ];
 
   return (
+
     <div style={{ 
       width: "100%", 
       height: "655px"
     }}>
-      <Slider {...settings}>
+      <Slider ref={ref} {...settings}>
         {images.map((img, index) => (
-          <div key={index} style={{ padding: "0 10px" }}> {/* Добавляем отступы между слайдами */}
+          <div key={index} > {/* Добавляем отступы между слайдами */}
             <img 
               src={img} 
               alt={`Slide ${index + 1}`} 
@@ -44,6 +44,7 @@ const SimpleSlider = () => {
                 width: "calc(100% - 20px)", // Учитываем padding
                 height: "655px", 
                 objectFit: "cover",
+                margin: "20px",
                 borderRadius: "8px" // Добавляем скругление углов для красоты
               }} 
             />
@@ -52,6 +53,6 @@ const SimpleSlider = () => {
       </Slider>
     </div>
   );
-};
+});
 
 export default SimpleSlider;

@@ -1,23 +1,29 @@
 {
   "files": {
-    "main.css": "/forgoten-artists/static/css/main.d78e7ec6.css",
-    "main.js": "/forgoten-artists/static/js/main.81461902.js",
+    "main.css": "/forgoten-artists/static/css/main.3576089f.css",
+    "main.js": "/forgoten-artists/static/js/main.64f8e36f.js",
     "static/js/453.605784d4.chunk.js": "/forgoten-artists/static/js/453.605784d4.chunk.js",
+    "static/media/div3.png": "/forgoten-artists/static/media/div3.1075f72ad1f5c7222346.png",
+    "static/media/rectangle-150.png": "/forgoten-artists/static/media/rectangle-150.10d6fbc1da93b66b8799.png",
     "static/media/mast.png": "/forgoten-artists/static/media/mast.846a0b3e33a6f0e9e73d.png",
+    "static/media/rectangle-200.png": "/forgoten-artists/static/media/rectangle-200.6539f5e6b2b4138984a3.png",
+    "static/media/rectangle-180.png": "/forgoten-artists/static/media/rectangle-180.f658c32f76fe90abb7af.png",
+    "static/media/rectangle-190.png": "/forgoten-artists/static/media/rectangle-190.f1cf41323bfdd19149c9.png",
     "static/media/Volkov.jpg": "/forgoten-artists/static/media/Volkov.ec32dd9d804879696a85.jpg",
     "static/media/bytovoy.jpg": "/forgoten-artists/static/media/bytovoy.2504ab17ea839a48741b.jpg",
-    "static/media/logo.svg": "/forgoten-artists/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "static/media/rectangle-160.png": "/forgoten-artists/static/media/rectangle-160.1617e82918ece4cacef5.png",
+    "static/media/rectangle-170.png": "/forgoten-artists/static/media/rectangle-170.ba9e51578224d46cb1ec.png",
     "static/media/slick.svg": "/forgoten-artists/static/media/slick.2630a3e3eab21c607e21.svg",
     "static/media/slick.eot": "/forgoten-artists/static/media/slick.a4e97f5a2a64f0ab1323.eot",
     "static/media/slick.ttf": "/forgoten-artists/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/forgoten-artists/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/forgoten-artists/index.html",
-    "main.d78e7ec6.css.map": "/forgoten-artists/static/css/main.d78e7ec6.css.map",
-    "main.81461902.js.map": "/forgoten-artists/static/js/main.81461902.js.map",
+    "main.3576089f.css.map": "/forgoten-artists/static/css/main.3576089f.css.map",
+    "main.64f8e36f.js.map": "/forgoten-artists/static/js/main.64f8e36f.js.map",
     "453.605784d4.chunk.js.map": "/forgoten-artists/static/js/453.605784d4.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.d78e7ec6.css",
-    "static/js/main.81461902.js"
+    "static/css/main.3576089f.css",
+    "static/js/main.64f8e36f.js"
   ]
 }

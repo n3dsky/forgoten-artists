@@ -1,17 +1,63 @@
 .layer {
-    width: 1905.12px;
-  height: 911px;
+  width: 100%;
+  height: 100%;
   position: absolute;
-  left: 0px;
-  top: 0px;
+  left: 0;
+  top: 0;
   object-fit: cover;
-  aspect-ratio: 1905.12/911;
+  aspect-ratio: 1905.12/911; /* Maintain original aspect ratio */
   pointer-events: none;
   opacity: 15%;
   z-index: 101;
+  max-width: 100vw; /* Ensure it doesn't overflow viewport */
+  max-height: 100vh; /* Ensure it doesn't overflow viewport */
 }
 
 .landing {
-    width: 100vw;
+  width: 100%;
+  min-height: 100vh; /* Full viewport height minimum */
+  position: relative; /* Create positioning context */
+  overflow: hidden; /* Prevent any overflow */
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .layer {
+    aspect-ratio: 16/9; /* Slightly adjust ratio for wider screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .layer {
+    aspect-ratio: 4/3; /* Better ratio for tablets */
+    opacity: 20%; /* Slightly increase visibility on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .layer {
+    aspect-ratio: 1/1; /* Square ratio for mobile */
+    opacity: 25%; /* More visible on small screens */
+  }
+  
+  .landing {
+    min-height: auto; /* Let content determine height */
     height: auto;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio fallback */
+  }
+}
+
+/* Orientation-specific adjustments */
+@media (orientation: portrait) {
+  .layer {
+    width: auto;
+    height: 100%;
+  }
+}
+
+@media (orientation: landscape) {
+  .layer {
+    width: 100%;
+    height: auto;
+  }
 }

@@ -43,7 +43,7 @@ const SimpleSlider = forwardRef((props, ref) => {
       <div style={{ 
           width: "100%", 
           height: "655px",
-          position: "relative"
+          position: "relative",
       }}>
           <Slider 
               ref={ref} 

@@ -12,16 +12,6 @@
     box-sizing: border-box;
 }
 
-.header .upper_ellipse {
-    position: absolute;
-    z-index: 2; /* CHANGED FROM 1 TO 0 */
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    top: 0;
-    left: 0;
-}
-
 .header .div-wrapper {
     z-index: 3; /* CHANGED FROM 2 TO 1 */
     display: flex;

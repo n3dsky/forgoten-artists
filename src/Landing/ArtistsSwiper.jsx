@@ -43,14 +43,14 @@ const SimpleSlider = forwardRef((props, ref) => {
     return (
       <div style={{ 
         width: "100%", 
-        height: "655px",
+        height: "700px", // Увеличено с 655px до 900px
         position: "relative",
         overflow: "hidden",
       }}>
         {/* Основной слайдер (под эллипсами) */}
         <div style={{
           position: "relative",
-          zIndex: 5, // Ниже эллипсов
+          zIndex: 5,
           height: "100%",
         }}>
           <Slider 
@@ -58,8 +58,8 @@ const SimpleSlider = forwardRef((props, ref) => {
             {...settings}
             afterChange={(index) => setCurrentSlide(index)}
             style={{
-              paddingTop: "50px",
-              paddingBottom: "50px",
+              paddingTop: "20px", // Увеличено с 50px
+              paddingBottom: "50px", // Увеличено с 50px
             }}
           >
             {images.map((img, index) => {
@@ -78,7 +78,7 @@ const SimpleSlider = forwardRef((props, ref) => {
                   <div style={{ 
                     position: "relative",
                     width: "calc(100% - 40px)",
-                    height: "555px",
+                    height: "650px", // Увеличено с 555px
                     margin: "0 20px"
                   }}>
                     <img 
@@ -104,12 +104,12 @@ const SimpleSlider = forwardRef((props, ref) => {
         {/* Эллипсы (над слайдером, но под всплывающими картинками) */}
         <div style={{
           position: "absolute",
-          top: -50,
+          top: -80, // Увеличено с -50
           left: 0,
           right: 0,
-          zIndex: 10, // Между слайдером и всплывающими картинками
-          height: "100px",
-          pointerEvents: "none", // Чтобы клики проходили сквозь эллипсы
+          zIndex: 10,
+          height: "60px", // Увеличено с 100px
+          pointerEvents: "none",
         }}>
           <img 
             src={upper_ellipse} 
@@ -129,7 +129,7 @@ const SimpleSlider = forwardRef((props, ref) => {
           left: 0,
           right: 0,
           zIndex: 10,
-          height: "100px",
+          height: "90px", // Увеличено с 100px
           pointerEvents: "none",
         }}>
           <img 
@@ -147,11 +147,11 @@ const SimpleSlider = forwardRef((props, ref) => {
         {/* Контейнер для всплывающих картинок (над всем) */}
         <div style={{
           position: "absolute",
-          top: "50px",
+          top: "30px", // Увеличено с 50px
           left: "37.5%",
           right: 0,
-          bottom: "50px",
-          zIndex: 20, // Выше эллипсов
+          bottom: "70px", // Увеличено с 50px
+          zIndex: 20,
           pointerEvents: "none",
         }}>
           {images.map((img, index) => {
@@ -162,8 +162,8 @@ const SimpleSlider = forwardRef((props, ref) => {
                 style={{
                   position: "absolute",
                   width: "calc(100% - 80px)",
-                  height: "555px",
-                  left: "50%",
+                  height: "650px", // Увеличено с 555px
+                  left: "45%",
                   transform: "translateX(-50%)",
                   opacity: hoveredCenter ? 1 : 0,
                   transition: "opacity 0.3s ease",
@@ -180,7 +180,7 @@ const SimpleSlider = forwardRef((props, ref) => {
                     <div 
                       key={i}
                       style={{
-                        width: "35%",
+                        width: "45%",
                         height: "49%",
                         overflow: "hidden",
                         borderRadius: "6px",

@@ -66,9 +66,6 @@ const Footer = ({sliderRef}) => {
           />
         </button>
       </div>
-      <div className='lower_ellipse'>
-        <img src={lower_ellipse} />
-      </div>
     </div>
   );
 };

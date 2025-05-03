@@ -4,6 +4,7 @@ import StartPage from './StartPage/StartPage.jsx'
 import SmirnovBio from './Smirnov/SmirnovBio.jsx';
 
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import SmirnovPictures from './Smirnov/SmirnovPictures.jsx';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
          <Route path="forgoten-artists/" element={<StartPage />} />
          <Route path="forgoten-artists/main-menu" element={<Landing />} />
          <Route path="forgoten-artists/main-menu/smirnov" element={<SmirnovBio />} />
+         <Route path="forgoten-artists/main-menu/smirnov/pictures" element={<SmirnovPictures />} />
        </Routes>
       </Router>
     </div>

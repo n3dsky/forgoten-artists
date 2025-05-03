@@ -1,0 +1,180 @@
+.artist-picture {
+    background: linear-gradient(90deg, rgba(110, 50, 50, 0.00) 0%, rgba(156, 74, 74, 0.09) 23.85%, rgba(195, 136, 136, 0.29) 100%), #7B829C;
+    height: 100vw;
+    width: 100vw;
+    overflow: hidden;
+}
+
+.side-menu {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    width: 10%;
+    overflow: visible;
+}
+
+.pins-container {
+    margin-top: 4.75rem;
+    position: absolute;
+    margin-left: 2.81rem;
+}
+
+.back-button-container {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    padding: 0 0 0 0;
+    transform: translateY(2%);
+}
+
+.back-button {
+    width: 100%;
+    height: 100%;
+}
+
+.back-button:hover {
+    transform: scale(1.05);
+}
+
+.nav {
+    right: 0;
+    position: absolute;
+    z-index: 102;
+    display: flex;
+    flex-direction: column;
+    gap: 0.31rem
+}
+
+.main-text-container-pictures {
+    position: absolute;
+    z-index: 2;
+    height: 80%;
+    width: 48%;
+    right: 8%;
+    top: 5%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.main-text-pictures {
+    color: #000;
+    font-family: "Cormorant Infant";
+    font-size: 2rem;
+    font-style: italic;
+    font-weight: 600;
+    line-height: 2.375rem;
+    text-align: left;
+}
+
+.header-text-pictures {
+    color: #FFE59B;
+    text-align: center;
+    font-family: "Cormorant Infant";
+    font-size: 2.8125rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 2.875rem;
+}
+
+.holst {
+    width: 100vw;
+    height: 100vw;
+    position: absolute;
+    left: 0;
+    top: 0;
+    object-fit: cover;
+    aspect-ratio: 1905.12/911; /* Maintain original aspect ratio */
+    pointer-events: none;
+    opacity: 15%;
+    z-index: 101;
+    max-width: 100vw; /* Ensure it doesn't overflow viewport */
+    max-height: 100vh; /* Ensure it doesn't overflow viewport */
+}
+
+.pictures-container {
+    display: flex;
+    flex-direction: column;
+    width: 35%;
+    height: 90%;
+    flex-shrink: 0;
+    gap: 0.5rem;
+    position: absolute;
+    left: 8.63rem;
+    top: 1.87rem;
+}
+
+.picture {
+    border-radius: 1.5625rem;
+    object-fit: cover;
+    width: 100%;
+    height: 50%;
+    z-index: 101;
+    object-fit: cover;
+}
+
+.nav img:hover {
+    filter: brightness(70%);
+}
+
+/* Адаптация для планшетов (768px - 1024px) */
+@media (max-width: 1024px) {
+    .main-text-container-pictures {
+        width: 60%;
+        right: 5%;
+        gap: 1.5rem;
+    }
+    
+    .main-text-pictures {
+        font-size: 1.8rem;
+        line-height: 2.1rem;
+    }
+    
+    .header-text-pictures {
+        font-size: 2.4rem;
+        line-height: 2.5rem;
+    }
+}
+
+/* Адаптация для мобильных устройств (до 768px) */
+@media (max-width: 768px) {
+    .main-text-container-pictures {
+        position: relative;
+        width: 90%;
+        right: auto;
+        left: 5%;
+        top: auto;
+        margin: 2rem auto;
+        height: auto;
+    }
+    
+    .main-text-pictures {
+        font-size: 1.5rem;
+        line-height: 1.8rem;
+        text-align: center;
+    }
+    
+    .header-text-pictures {
+        font-size: 2rem;
+        line-height: 2.2rem;
+    }
+}
+
+/* Адаптация для очень маленьких экранов (до 480px) */
+@media (max-width: 480px) {
+    .main-text-container-pictures {
+        width: 95%;
+        left: 2.5%;
+        gap: 1rem;
+    }
+    
+    .main-text-pictures {
+        font-size: 1.2rem;
+        line-height: 1.5rem;
+    }
+    
+    .header-text-pictures {
+        font-size: 1.6rem;
+        line-height: 1.8rem;
+    }
+}

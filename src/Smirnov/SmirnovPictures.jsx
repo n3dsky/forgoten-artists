@@ -1,8 +1,10 @@
-import './SmirnovBio.css';
+import './SmirnovPictures.css';
 
 import { useNavigate } from 'react-router-dom';
 
-import portret from './images/фотка.jpg'
+import picture1 from './images/picture1.jpg'
+import picture2 from './images/picture2.jpg'
+
 import backButton from './images/Разрыв.png'
 import holst from './images/текстура холста.png'
 import pins from './images/от скетчбука.svg'
@@ -12,7 +14,7 @@ import navItem2 from './images/nav2.svg'
 import navItem3 from './images/nav3.svg'
 import navItem4 from './images/nav4.svg'
 
-const SmirnovBio = (props) => {
+const SmirnovPictures = (props) => {
     const navigate = useNavigate();
 
     const handleBackButtonClick = () => {
@@ -20,11 +22,11 @@ const SmirnovBio = (props) => {
     };
 
     const handleNavItem1Click = () => {
-        console.log('abobus');
+        navigate(-1);
     };
 
     const handleNavItem2Click = () => {
-        navigate("pictures")
+        console.log('abobus');
     };
 
     const handleNavItem3Click = () => {
@@ -36,7 +38,7 @@ const SmirnovBio = (props) => {
     };
 
     return (
-        <div className='artist-bio'>
+        <div className='artist-picture'>
             <img src={holst} alt="" className='holst'/>
             <div className="pins-container">
                 <img className='pins' src={pins} alt="" />
@@ -50,17 +52,26 @@ const SmirnovBio = (props) => {
                     style={{cursor: 'pointer'}}
                 />
             </div>
-            <div className="main-text-container">
-                <div className="header-text">
-                    Василий Сергеевич Смирнов (1858–1890)
+            
+            <div className="pictures-container">
+                    <img className='picture' src={picture1} alt="" />
+                    <img className='picture' src={picture2} alt="" />
+            </div>
+
+            <div className="main-text-container-pictures">
+                <div className="header-text-pictures">
+                    ХУДОЖЕСТВЕННЫЙ СТИЛЬ И ТЕХНИКА ПИСЬМА
                 </div>
-                <div className="main-text">
-                    Василий Сергеевич Смирнов родился в 1858 году в Москве в семье купца. В 1875 году поступил в Московское училище живописи, ваяния и зодчества, где учился у Василия Перова. Позже продолжил образование в Императорской Академии художеств в Санкт-Петербурге (1879–1885) под руководством Павла Чистякова, мастера исторической живописи. Смирнов выделялся среди сверстников талантом к академическому рисунку и интересом к античной истории. В 1885 году он получил большую золотую медаль Академии за картину «Смерть Нерона», что позволило ему отправиться в пенсионерскую поездку по Европе (Италия, Франция). Однако его карьера оборвалась трагически: в 1890 году, в возрасте 32 лет, художник умер от туберкулёза. Несмотря на короткую жизнь, Смирнов оставил заметный след в русском искусстве. Его работы хранятся в Государственном Русском музее и Третьяковской галерее, но широкой публике он почти неизвестен.
+                <div className="main-text-pictures">
+                    <p>Смирнов работал в рамках академического исторического жанра, сочетая точность деталей с драматизмом сюжетов. </p>
+                    <p>Его стиль отличают: </p>
+                    <p>- Строгая композиция — выверенное построение сцен, напоминающее театральные мизансцены.</p>
+                    <p>- Интерес к античности и библейским темам — вдохновение классическим искусством и литературой.</p>
+                    <p>- Эмоциональная глубина — акцент на психологизме персонажей, даже в многофигурных композициях.</p>
+                    <p>В отличие от современных ему передвижников, Смирнов избегал социальной критики, сосредоточившись на «вечных» сюжетах. Его работы часто сравнивают с творчеством Генриха Семирадского, но без пышной декоративности — они лаконичнее и строже.</p>
                 </div>
             </div>
-            <div className="portret">
-                <img src={portret} alt="" />
-            </div>
+
             <div className="nav">
                 <img 
                     src={navItem1} 
@@ -91,4 +102,4 @@ const SmirnovBio = (props) => {
     );
 };
 
-export default SmirnovBio;
+export default SmirnovPictures;

@@ -1,4 +1,4 @@
-import React, { forwardRef, useState } from "react";
+import React, { forwardRef, useState, useRef } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -15,10 +15,14 @@ import port from './images/port.jpg';
 import port1 from './images/port1.jpg';
 import nat from './images/nat.png';
 import nat1 from './images/nat1.jpg';
+import { useNavigate } from "react-router-dom";
 
 const SimpleSlider = forwardRef((props, ref) => {
     const [hoveredCenter, setHoveredCenter] = useState(false);
     const [currentSlide, setCurrentSlide] = useState(0);
+    const popupRef = useRef(null);
+
+    const navigate = useNavigate();
   
     const settings = {
       infinite: true,
@@ -31,11 +35,10 @@ const SimpleSlider = forwardRef((props, ref) => {
       beforeChange: (current, next) => setCurrentSlide(next)
     };
   
-    // Маппинг основной картинки к двум всплывающим с текстом
     const imageMap = {
       [hist]: [
-        { image: hist, text: "Михаил Иванович Скотти" },
-        { image: hist1, text: "Василий Сергеевич Смирнов" }
+        { image: hist, text: "Михаил Иванович Скотти", nav: "scotti" },
+        { image: hist1, text: "Василий Сергеевич Смирнов", nav: "smirnov" }
       ],
       [byt]: [
         { image: byt, text: "Иван Иванович Соколов" },
@@ -54,6 +57,10 @@ const SimpleSlider = forwardRef((props, ref) => {
         { image: port1, text: "Александр Васильевич Куприн" }
       ]
     };
+
+    const handleNav = (nav) => {
+      if (nav) navigate(nav);
+    };
   
     const images = [
       hist,
@@ -62,6 +69,23 @@ const SimpleSlider = forwardRef((props, ref) => {
       nat,
       port,
     ];
+
+    const handleMouseEnter = (isCenter) => {
+      if (isCenter) setHoveredCenter(true);
+    };
+
+    const handleMouseLeave = (e) => {
+      // Проверяем, что relatedTarget существует и является DOM-узлом
+      if (!e.relatedTarget || !(e.relatedTarget instanceof Node)) {
+        setHoveredCenter(false);
+        return;
+      }
+      
+      // Проверяем, что курсор не перешел на всплывающие элементы или их детей
+      if (!popupRef.current || !popupRef.current.contains(e.relatedTarget)) {
+        setHoveredCenter(false);
+      }
+    };
   
     return (
       <div style={{ 
@@ -90,8 +114,8 @@ const SimpleSlider = forwardRef((props, ref) => {
               return (
                 <div 
                   key={index}
-                  onMouseEnter={() => isCenter && setHoveredCenter(true)}
-                  onMouseLeave={() => setHoveredCenter(false)}
+                  onMouseEnter={() => handleMouseEnter(isCenter)}
+                  onMouseLeave={handleMouseLeave}
                   style={{
                     transition: "transform 0.3s ease",
                     transform: isCenter ? 'scale(1.05)' : 'scale(0.95)',
@@ -124,7 +148,7 @@ const SimpleSlider = forwardRef((props, ref) => {
           </Slider>
         </div>
   
-        {/* Эллипсы (над слайдером, но под всплывающими картинками) */}
+        {/* Эллипсы */}
         <div style={{
           position: "absolute",
           top: -80,
@@ -167,88 +191,82 @@ const SimpleSlider = forwardRef((props, ref) => {
           />
         </div>
   
-        {/* Контейнер для всплывающих картинок (над всем) */}
-        <div style={{
-          position: "absolute",
-          top: "30px",
-          left: "37.5%",
-          right: 0,
-          bottom: "70px",
-          zIndex: 20,
-          pointerEvents: "none",
-        }}>
+        {/* Контейнер для всплывающих картинок */}
+        <div 
+          ref={popupRef}
+          style={{
+            position: "absolute",
+            top: "30px",
+            left: "50%",
+            transform: "translateX(-50%)",
+            zIndex: 20,
+            width: "35%", // Уменьшил ширину с 45% до 35%
+            height: "650px",
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "space-between",
+            padding: "10px",
+            pointerEvents: hoveredCenter ? "auto" : "none"
+          }}
+          onMouseEnter={() => setHoveredCenter(true)}
+          onMouseLeave={() => setHoveredCenter(false)}
+        >
           {images.map((img, index) => {
             const isCenter = currentSlide === index;
             const overlayImages = imageMap[img] || [];
             
             return isCenter ? (
-              <div 
-                key={index}
-                style={{
-                  position: "absolute",
-                  width: "calc(100% - 80px)",
-                  height: "650px",
-                  left: "45%",
-                  transform: "translateX(-50%)",
-                  opacity: hoveredCenter ? 1 : 0,
-                  transition: "opacity 0.3s ease",
-                }}
-              >
-                <div style={{
-                  display: "flex",
-                  flexDirection: "column",
-                  height: "100%",
-                  justifyContent: "space-between",
-                  padding: "10px"
-                }}>
-                  {overlayImages.map((item, i) => (
-                    <div 
-                      key={i}
+              <React.Fragment key={index}>
+                {overlayImages.map((item, i) => (
+                  <div 
+                    key={i}
+                    style={{
+                      position: "relative",
+                      width: "100%", // Теперь занимает 100% от уменьшенного контейнера
+                      height: "49%",
+                      overflow: "hidden",
+                      borderRadius: "6px",
+                      boxShadow: "0 4px 12px rgba(0,0,0,0.3)",
+                      transform: hoveredCenter 
+                        ? "translateY(0)" 
+                        : i === 0 
+                          ? "translateY(-20px)" 
+                          : "translateY(20px)",
+                      opacity: hoveredCenter ? 1 : 0,
+                      transition: "all 0.3s ease",
+                      cursor: item.nav ? "pointer" : "default",
+                    }}
+                    onClick={() => item.nav && handleNav(item.nav)}
+                  >
+                    <img
+                      src={item.image}
+                      alt={`Preview ${i + 1}`}
                       style={{
-                        position: "relative",
-                        width: "45%",
-                        height: "49%",
-                        overflow: "hidden",
-                        borderRadius: "6px",
-                        boxShadow: "0 4px 12px rgba(0,0,0,0.3)",
-                        transform: hoveredCenter 
-                          ? "translateY(0)" 
-                          : i === 0 
-                            ? "translateY(-20px)" 
-                            : "translateY(20px)",
-                        opacity: hoveredCenter ? 1 : 0,
-                        transition: "all 0.3s ease",
+                        width: "100%", // Заполняет весь родительский div
+                        height: "100%",
+                        objectFit: "cover",
+                        pointerEvents: "none",
                       }}
-                    >
-                      <img
-                        src={item.image}
-                        alt={`Preview ${i + 1}`}
-                        style={{
-                          width: "100%",
-                          height: "100%",
-                          objectFit: "cover",
-                        }}
-                      />
-                      {/* Текст для верхней и нижней картинки */}
-                      <div style={{
-                        position: "absolute",
-                        top: "10px",
-                        [i === 0 ? "right" : "left"]: "10px",
-                        color: "white",
-                        padding: "5px 10px",
-                        borderRadius: "4px",
-                        fontSize: "1.7rem",
-                        fontWeight: "bold",
-                        textShadow: "1px 1px 2px rgba(0,0,0,0.5)",
-                        maxWidth: "80%",
-                        fontFamily: '"Cormorant Infant", serif'
-                      }}>
-                        {item.text}
-                      </div>
+                    />
+                    <div style={{
+                      position: "absolute",
+                      top: "10px",
+                      [i === 0 ? "right" : "left"]: "10px",
+                      color: "white",
+                      padding: "5px 10px",
+                      borderRadius: "4px",
+                      fontSize: "1.7rem",
+                      fontWeight: "bold",
+                      textShadow: "1px 1px 2px rgba(0,0,0,0.5)",
+                      maxWidth: "80%",
+                      fontFamily: '"Cormorant Infant", serif',
+                      pointerEvents: "none",
+                    }}>
+                      {item.text}
                     </div>
-                  ))}
-                </div>
-              </div>
+                  </div>
+                ))}
+              </React.Fragment>
             ) : null;
           })}
         </div>

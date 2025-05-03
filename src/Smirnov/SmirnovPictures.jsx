@@ -30,7 +30,7 @@ const SmirnovPictures = (props) => {
     };
 
     const handleNavItem3Click = () => {
-        console.log('abobus');
+        navigate("picture1")
     };
 
     const handleNavItem4Click = () => {

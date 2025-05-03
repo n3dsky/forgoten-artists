@@ -24,6 +24,13 @@ import SokolovPicture1Info from './Sokolov/SokolovPicture1Info.jsx';
 import SokolovPicture2 from './Sokolov/SokolovPicture2.jsx';
 import SokolovPicture2Info from './Sokolov/SokolovPicture2Info.jsx';
 
+import SorokaBio from './Soroka/SorokaBio.jsx';
+import SorokaPictures from './Soroka/SorokaPictures.jsx';
+import SorokaPicture1 from './Soroka/SorokaPicture1.jsx';
+import SorokaPicture1Info from './Soroka/SorokaPicture1Info.jsx';
+import SorokaPicture2 from './Soroka/SorokaPicture2.jsx';
+import SorokaPicture2Info from './Soroka/SorokaPicture2Info.jsx';
+
 function App() {
   return (
     <div className='App'>
@@ -52,6 +59,13 @@ function App() {
          <Route path="forgoten-artists/main-menu/sokolov/pictures/picture1/info" element={<SokolovPicture1Info />} />
          <Route path="forgoten-artists/main-menu/sokolov/pictures/picture2" element={<SokolovPicture2 />} />
          <Route path="forgoten-artists/main-menu/sokolov/pictures/picture2/info" element={<SokolovPicture2Info />} />
+
+         <Route path="forgoten-artists/main-menu/soroka" element={<SorokaBio />} />
+         <Route path="forgoten-artists/main-menu/soroka/pictures" element={<SorokaPictures />} />
+         <Route path="forgoten-artists/main-menu/soroka/pictures/picture1" element={<SorokaPicture1 />} />
+         <Route path="forgoten-artists/main-menu/soroka/pictures/picture1/info" element={<SorokaPicture1Info />} />
+         <Route path="forgoten-artists/main-menu/soroka/pictures/picture2" element={<SorokaPicture2 />} />
+         <Route path="forgoten-artists/main-menu/soroka/pictures/picture2/info" element={<SorokaPicture2Info />} />
 
          
        </Routes>

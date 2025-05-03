@@ -10,6 +10,13 @@ import SmirnovPicture1Info from './Smirnov/SmirnovPicture1Info.jsx';
 import SmirnovPicture2 from './Smirnov/SmirnovPicture2.jsx'
 import SmirnovPicture2Info from './Smirnov/SmirnovPicture2Info.jsx';
 
+import ScottiBio from './Scotti/ScottiBio.jsx';
+import ScottiPictures from './Scotti/ScottiPictures.jsx';
+import ScottiPicture1 from './Scotti/ScottiPicture1.jsx';
+import ScottiPicture1Info from './Scotti/ScottiPicture1Info.jsx';
+import ScottiPicture2 from './Scotti/ScottiPicture2.jsx';
+import ScottiPicture2Info from './Scotti/ScottiPicture2Info.jsx';
+
 function App() {
   return (
     <div className='App'>
@@ -17,12 +24,21 @@ function App() {
         <Routes>
          <Route path="forgoten-artists/" element={<StartPage />} />
          <Route path="forgoten-artists/main-menu" element={<Landing />} />
+
          <Route path="forgoten-artists/main-menu/smirnov" element={<SmirnovBio />} />
          <Route path="forgoten-artists/main-menu/smirnov/pictures" element={<SmirnovPictures />} />
          <Route path="forgoten-artists/main-menu/smirnov/pictures/picture1" element={<SmirnovPicture1 />} />
          <Route path="forgoten-artists/main-menu/smirnov/pictures/picture1/info" element={<SmirnovPicture1Info />} />
          <Route path="forgoten-artists/main-menu/smirnov/pictures/picture2" element={<SmirnovPicture2 />} />
          <Route path="forgoten-artists/main-menu/smirnov/pictures/picture2/info" element={<SmirnovPicture2Info />} />
+
+         <Route path="forgoten-artists/main-menu/scotti" element={<ScottiBio />} />
+         <Route path="forgoten-artists/main-menu/scotti/pictures" element={<ScottiPictures />} />
+         <Route path="forgoten-artists/main-menu/scotti/pictures/picture1" element={<ScottiPicture1 />} />
+         <Route path="forgoten-artists/main-menu/scotti/pictures/picture1/info" element={<ScottiPicture1Info />} />
+         <Route path="forgoten-artists/main-menu/scotti/pictures/picture2" element={<ScottiPicture2 />} />
+         <Route path="forgoten-artists/main-menu/scotti/pictures/picture2/info" element={<ScottiPicture2Info />} />
+
          
        </Routes>
       </Router>

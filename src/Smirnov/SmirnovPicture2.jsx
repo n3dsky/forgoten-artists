@@ -1,10 +1,9 @@
-import './SmirnovPicture1.css';
+import './SmirnovPicture2.css';
 
 import { useNavigate } from 'react-router-dom';
 
-import picture from './images/picture1full.jpg'
+import picture from './images/picture2full.jpg'
 
-import backButton from './images/Разрыв.png'
 import holst from './images/текстура холста.png'
 import pins from './images/от скетчбука.svg'
 
@@ -13,7 +12,7 @@ import navItem2 from './images/nav2.svg'
 import navItem3 from './images/nav3.svg'
 import navItem4 from './images/nav4.svg'
 
-const SmirnovBio = (props) => {
+const SmirnovPicture2 = (props) => {
     const navigate = useNavigate();
 
     const handleNavItem1Click = () => {
@@ -25,11 +24,11 @@ const SmirnovBio = (props) => {
     };
 
     const handleNavItem3Click = () => {
-        console.log('abobus');
+        navigate("../picture1", { relative: "path" });
     };
 
     const handleNavItem4Click = () => {
-        navigate("../picture2", { relative: "path" });
+        console.log('abobus');
     };
 
     const handleInfoClick = () => {
@@ -37,19 +36,21 @@ const SmirnovBio = (props) => {
     };
 
     return (
-        <div className='artist-picture1'>
+        <div className='artist-picture2'>
             <img src={holst} alt="" className='holst'/>
             <div className="pins-container">
                 <img className='pins' src={pins} alt="" />
             </div>
-            <div className="main-picture1-container">
+            <div className="main-picture2-container">
                 <div className="header-text-picture1">
-                    «Смерть Нерона» (1888)
+                    «Торжество Поппеи над Октавией» (1886)
                 </div>
-                <div className="picture1-image">
-                    <div className='picture1' style={{
+                <div className="picture2-image">
+                    <div className='picture2' style={{
                             backgroundImage: `url(${picture})`,
-                            backgroundSize: "cover"
+                            backgroundSize: "contain",
+                            backgroundRepeat: "no-repeat",
+                            backgroundPosition: "center",
                         }}>
                         <div className="to-info" onClick={() => {handleInfoClick()}}>
                             о картине
@@ -87,4 +88,4 @@ const SmirnovBio = (props) => {
     );
 };
 
-export default SmirnovBio;
+export default SmirnovPicture2;

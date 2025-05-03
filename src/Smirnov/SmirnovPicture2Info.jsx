@@ -1,4 +1,4 @@
-import './SmirnovPicture1Info.css';
+import './SmirnovPicture2Info.css';
 
 import { useNavigate } from 'react-router-dom';
 
@@ -20,7 +20,7 @@ const SmirnovPicture1Info = (props) => {
     };
 
     return (
-        <div className='smirnov-picture1-info'>
+        <div className='smirnov-picture2-info'>
             <img src={holst} alt="" className='holst'/>
             <div className="pins-container">
                 <img className='pins' src={pins} alt="" />
@@ -34,11 +34,8 @@ const SmirnovPicture1Info = (props) => {
                     style={{cursor: 'pointer'}}
                 />
             </div>
-            <div className="main-picture1-info-text-container">
-                <p>- Сюжет: Последние минуты жизни римского императора Нерона, который, спасаясь от восставших легионеров, приказывает рабу убить себя.</p>
-                <p>- Анализ: Композиция построена на контрасте: Нерон в белых одеждах (символ тщеславия) противопоставлен тёмному интерьеру и фигурам солдат на заднем плане.</p>
-                <p>- Детали: Тщательно прописанные элементы доспехов, античная мебель, игра света на лицах.</p>
-                <p>- Психологизм: Лицо Нерона выражает страх и отчаяние, что подчёркивает трагедию властителя-тирана.</p>
+            <div className="main-picture2-info-text-container">
+                <p>Поппея Сабина, вторая жена римского императора Нерона. Ради нее Нерон развелся со своей женой Октавией. Не довольствуясь моральной и фактической победой, Поппея приложила все усилия, чтобы избавиться от популярной в народе Октавии. Бывшую императрицу вначале сослали на остров по ложному обвинению и вскоре жестоко убили, а ее голову доставили в Рим на потеху Поппеи.</p>
             </div>
             <div className="to-top" onClick={() => {handleToTopClick()}}>
                 <img src={toTopButton} alt="" />

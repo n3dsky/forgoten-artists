@@ -18,11 +18,11 @@ const SmirnovPictures = (props) => {
     const navigate = useNavigate();
 
     const handleBackButtonClick = () => {
-        navigate(-1);
+        navigate("..", { relative: "path" });
     };
 
     const handleNavItem1Click = () => {
-        navigate(-1);
+        navigate("..", { relative: "path" });
     };
 
     const handleNavItem2Click = () => {
@@ -34,7 +34,7 @@ const SmirnovPictures = (props) => {
     };
 
     const handleNavItem4Click = () => {
-        console.log('abobus');
+        navigate("picture2")
     };
 
     return (

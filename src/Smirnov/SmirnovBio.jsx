@@ -16,7 +16,7 @@ const SmirnovBio = (props) => {
     const navigate = useNavigate();
 
     const handleBackButtonClick = () => {
-        navigate(-1);
+        navigate("..", { relative: "path" });
     };
 
     const handleNavItem1Click = () => {
@@ -28,11 +28,11 @@ const SmirnovBio = (props) => {
     };
 
     const handleNavItem3Click = () => {
-        console.log('abobus');
+        navigate('pictures/picture1');
     };
 
     const handleNavItem4Click = () => {
-        console.log('abobus');
+        navigate('pictures/picture2');
     };
 
     return (

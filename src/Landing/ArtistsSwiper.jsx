@@ -41,8 +41,8 @@ const SimpleSlider = forwardRef((props, ref) => {
         { image: hist1, text: "Василий Сергеевич Смирнов", nav: "smirnov" }
       ],
       [byt]: [
-        { image: byt, text: "Иван Иванович Соколов" },
-        { image: byt1, text: "Григорий Васильевич Сорока" }
+        { image: byt, text: "Иван Иванович Соколов", nav: "sokolov" },
+        { image: byt1, text: "Григорий Васильевич Сорока", nav: "soroka" }
       ],
       [peyz]: [
         { image: peyz, text: "Ефим Ефимович Волков" },

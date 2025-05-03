@@ -1,5 +1,5 @@
-.scotti-artist-bio {
-    background: #A6A5AC;
+.sokolov-artist-bio {
+    background: #A8B2A2;
     height: 100vw;
     width: 100vw;
     overflow: hidden;
@@ -36,7 +36,7 @@
     transform: scale(1.05);
 }
 
-.scotti-portret {
+.sokolov-portret {
     position: absolute;
     right: 0;
 }
@@ -50,7 +50,7 @@
     gap: 0.31rem
 }
 
-.scotti-main-text-container {
+.sokolov-main-text-container {
     position: absolute;
     z-index: 2;
     height: 80%;
@@ -62,7 +62,7 @@
     gap: 2rem;
 }
 
-.scotti-main-text {
+.sokolov-main-text {
     color: #572322;
     leading-trim: both;
     text-edge: cap;
@@ -75,7 +75,7 @@
     text-align: left;
 }
 
-.scotti-header-text {
+.sokolov-header-text {
     color: #FFE59B;
     font-family: "Cormorant Infant";
     font-size: clamp(2rem, 6vw, 4.75rem);
@@ -105,14 +105,14 @@
 }
 
 @media (max-width: 1024px) {
-    .scotti-main-text-container {
+    .sokolov-main-text-container {
         width: 70%;
         left: 5%;
     }
 }
 
 @media (max-width: 768px) {
-    .scotti-main-text-container {
+    .sokolov-main-text-container {
         width: 80%;
         left: 5%;
         top: 3%;
@@ -121,7 +121,7 @@
 }
 
 @media (max-width: 480px) {
-    .scott-main-text-container {
+    .sokolov-main-text-container {
         width: 90%;
         left: 5%;
         top: 2%;

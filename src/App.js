@@ -17,6 +17,13 @@ import ScottiPicture1Info from './Scotti/ScottiPicture1Info.jsx';
 import ScottiPicture2 from './Scotti/ScottiPicture2.jsx';
 import ScottiPicture2Info from './Scotti/ScottiPicture2Info.jsx';
 
+import SokolovBio from './Sokolov/SokolovBio.jsx';
+import SokolovPictures from './Sokolov/SokolovPictures.jsx';
+import SokolovPicture1 from './Sokolov/SokolovPicture1.jsx';
+import SokolovPicture1Info from './Sokolov/SokolovPicture1Info.jsx';
+import SokolovPicture2 from './Sokolov/SokolovPicture2.jsx';
+import SokolovPicture2Info from './Sokolov/SokolovPicture2Info.jsx';
+
 function App() {
   return (
     <div className='App'>
@@ -38,6 +45,13 @@ function App() {
          <Route path="forgoten-artists/main-menu/scotti/pictures/picture1/info" element={<ScottiPicture1Info />} />
          <Route path="forgoten-artists/main-menu/scotti/pictures/picture2" element={<ScottiPicture2 />} />
          <Route path="forgoten-artists/main-menu/scotti/pictures/picture2/info" element={<ScottiPicture2Info />} />
+
+         <Route path="forgoten-artists/main-menu/sokolov" element={<SokolovBio />} />
+         <Route path="forgoten-artists/main-menu/sokolov/pictures" element={<SokolovPictures />} />
+         <Route path="forgoten-artists/main-menu/sokolov/pictures/picture1" element={<SokolovPicture1 />} />
+         <Route path="forgoten-artists/main-menu/sokolov/pictures/picture1/info" element={<SokolovPicture1Info />} />
+         <Route path="forgoten-artists/main-menu/sokolov/pictures/picture2" element={<SokolovPicture2 />} />
+         <Route path="forgoten-artists/main-menu/sokolov/pictures/picture2/info" element={<SokolovPicture2Info />} />
 
          
        </Routes>

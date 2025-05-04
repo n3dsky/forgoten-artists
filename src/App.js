@@ -44,18 +44,33 @@ import CleverPicture1 from './Clever/CleverPicture1.jsx';
 import CleverPicture1Info from './Clever/CleverPicture1Info.jsx';
 import CleverPicture2 from './Clever/CleverPicture2.jsx';
 import CleverPicture2Info from './Clever/CleverPicture2Info.jsx';
+
 import KuprinBio from './Kuprin/KuprinBio.jsx';
 import KuprinPictures from './Kuprin/KuprinPictures.jsx';
 import KuprinPicture1 from './Kuprin/KuprinPicture1.jsx';
 import KuprinPicture1Info from './Kuprin/KuprinPicture1Info.jsx';
 import KuprinPicture2 from './Kuprin/KuprinPicture2.jsx';
 import KuprinPicture2Info from './Kuprin/KuprinPicture2Info.jsx';
+
 import SapunovBio from './Sapunov/SapunovBio.jsx';
 import SapunovPictures from './Sapunov/SapunovPictures.jsx';
 import SapunovPicture1 from './Sapunov/SapunovPicture1.jsx';
 import SapunovPicture1Info from './Sapunov/SapunovPicture1Info.jsx';
 import SapunovPicture2 from './Sapunov/SapunovPicture2.jsx';
 import SapunovPicture2Info from './Sapunov/SapunovPicture2Info.jsx';
+
+import MokrickiyBio from './Mokrickiy/MokrickiyBio.jsx';
+import MokrickiyPictures from './Mokrickiy/MokrickiyPictures.jsx';
+import MokrickiyPicture1 from './Mokrickiy/MokrickiyPicture1.jsx';
+import MokrickiyPicture1Info from './Mokrickiy/MokrickiyPicture1Info.jsx';
+import MokrickiyPicture2 from './Mokrickiy/MokrickiyPicture2.jsx';
+import MokrickiyPicture2Info from './Mokrickiy/MokrickiyPicture2Info.jsx';
+import ArgunovBio from './Argunov/ArgunovBio.jsx';
+import ArgunovPictures from './Argunov/ArgunovPictures.jsx';
+import ArgunovPicture1 from './Argunov/ArgunovPicture1.jsx';
+import ArgunovPicture1Info from './Argunov/ArgunovPicture1Info.jsx';
+import ArgunovPicture2 from './Argunov/ArgunovPicture2.jsx';
+import ArgunovPicture2Info from './Argunov/ArgunovPicture2Info.jsx';
 
 function App() {
   return (
@@ -120,6 +135,20 @@ function App() {
          <Route path="forgoten-artists/main-menu/sapunov/pictures/picture1/info" element={<SapunovPicture1Info />} />
          <Route path="forgoten-artists/main-menu/sapunov/pictures/picture2" element={<SapunovPicture2 />} />
          <Route path="forgoten-artists/main-menu/sapunov/pictures/picture2/info" element={<SapunovPicture2Info />} />
+
+         <Route path="forgoten-artists/main-menu/mokrickiy" element={<MokrickiyBio />} />
+         <Route path="forgoten-artists/main-menu/mokrickiy/pictures" element={<MokrickiyPictures />} />
+         <Route path="forgoten-artists/main-menu/mokrickiy/pictures/picture1" element={<MokrickiyPicture1 />} />
+         <Route path="forgoten-artists/main-menu/mokrickiy/pictures/picture1/info" element={<MokrickiyPicture1Info />} />
+         <Route path="forgoten-artists/main-menu/mokrickiy/pictures/picture2" element={<MokrickiyPicture2 />} />
+         <Route path="forgoten-artists/main-menu/mokrickiy/pictures/picture2/info" element={<MokrickiyPicture2Info />} />
+
+         <Route path="forgoten-artists/main-menu/argunov" element={<ArgunovBio />} />
+         <Route path="forgoten-artists/main-menu/argunov/pictures" element={<ArgunovPictures />} />
+         <Route path="forgoten-artists/main-menu/argunov/pictures/picture1" element={<ArgunovPicture1 />} />
+         <Route path="forgoten-artists/main-menu/argunov/pictures/picture1/info" element={<ArgunovPicture1Info />} />
+         <Route path="forgoten-artists/main-menu/argunov/pictures/picture2" element={<ArgunovPicture2 />} />
+         <Route path="forgoten-artists/main-menu/argunov/pictures/picture2/info" element={<ArgunovPicture2Info />} />
          
        </Routes>
       </Router>

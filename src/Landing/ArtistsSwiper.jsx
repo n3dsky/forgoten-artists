@@ -53,7 +53,7 @@ const SimpleSlider = forwardRef((props, ref) => {
         { image: nat1, text: "Николай Николаевич Сапунов", nav: "sapunov" }
       ],
       [port]: [
-        { image: port, text: "Аполлон Николаевич Мокрицкий", nav: "mocrickiy" },
+        { image: port, text: "Аполлон Николаевич Мокрицкий", nav: "mokrickiy" },
         { image: port1, text: "Иван Петрович Аргунов", nav: "argunov" }
       ]
     };

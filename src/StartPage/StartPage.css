@@ -1,196 +1,33 @@
-.div,
-.div * {
-  box-sizing: border-box;
+.start-page {
+  width: 100vw;
+  height: 100vw;
 }
 
-.div {
-  background: #f3efe2;
-  width: 100%;
-  min-height: 100vh;
-  position: relative;
-  overflow: hidden;
-  aspect-ratio: 1905.12/911;
-}
-
-.div .rectangle-15 {
-  width: 36%; /* 686px / 1905px */
-  height: 100%;
+.main-button {
   position: absolute;
-  left: 0;
-  top: 0;
-  object-fit: cover;
-}
+  bottom: 3rem;
+  right: 4.5rem;
+  border-radius: 3.6875rem;
+  border: 1px solid #000;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.04) 0%, rgba(0, 0, 0, 0.04) 100%), #F3EFE2;
+  box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.25);
 
-.div .div2 {
-  position: absolute;
-  inset: 0;
-}
+  width: 55%;
+  height: 24%;
+  flex-shrink: 0;
 
-/* Ellipses - converted to relative positioning */
-.div .ellipse-13,
-.div .ellipse-14,
-.div .ellipse-15,
-.div .ellipse-16,
-.div .ellipse-17,
-.div .ellipse-18 {
-  background: #d9d9d9;
-  border-radius: 50%;
-  width: 1.26vw; /* 24px / 1905px */
-  height: 1.26vw;
-  position: absolute;
-  left: 2.36%; /* 45px / 1905px */
-}
-
-.div .ellipse-13 { top: 8.34%; /* 76px / 911px */ }
-.div .ellipse-14 { top: 17.55%; }
-.div .ellipse-15 { top: 26.76%; }
-.div .ellipse-16 { top: 55.35%; }
-.div .ellipse-17 { top: 64.56%; }
-.div .ellipse-18 { top: 73.77%; }
-
-.div .div3 {
-  color: #000000;
+  color: #000;
   text-align: center;
-  font-family: "Cormorant Infant", serif;
-  font-size: 5.25vw; /* 100px / 1905px */
-  line-height: 0.9em;
+  font-family: "Cormorant Infant";
+  font-size: 550%;
+  font-style: normal;
   font-weight: 500;
-  position: absolute;
-  left: 43.3%; /* 825px / 1905px */
-  top: 62.46%; /* 569px / 911px */
-  width: 49.55%; /* 944px / 1905px */
-  height: 37.54%; /* 342px / 911px */
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  line-height: 116%; /* 94.737% */
+
+  cursor: pointer;
 }
 
-.div .div3:hover {
-  text-decoration: underline;
-}
-
-/* Image containers - made responsive */
-.div .rectangle-18,
-.div .rectangle-20 {
-  border-radius: 9.7vw; /* 185px / 1905px */
-  width: 18.37%; /* 350px / 1905px */
-  height: 57.63%; /* 525px / 911px */
-  position: absolute;
-  object-fit: cover;
-}
-
-.div .rectangle-19 {
-  border-radius: 9.7vw;
-  width: 18.37%;
-  height: 57.63%;
-  position: absolute;
-  object-fit: cover;
-}
-
-.div .rectangle-20 { left: 42.68%; top: 10.43%; }
-.div .rectangle-19 { left: 58.27%; top: 2.96%; }
-.div .rectangle-18 { left: 75.12%; top: 10.43%; }
-
-.div .rectangle-16 {
-  background: linear-gradient(
-    to left,
-    rgba(29, 42, 19, 0.2),
-    rgba(29, 42, 19, 0.2)
-  );
-  width: 2.52%; /* 48px / 1905px */
-  height: 108.78%; /* 991px / 911px */
-  position: absolute;
-  left: 33.96%; /* 647px / 1905px */
-  top: -4.39%; /* -40px / 911px */
-  object-fit: cover;
-}
-
-.div .rectangle-17 {
-  width: 57.43%; /* 1094px / 1905px */
-  height: 69.26%; /* 631px / 911px */
-  position: absolute;
-  left: 39.27%; /* 748px / 1905px */
-  top: 1.1%; /* 10px / 911px */
-  object-fit: cover;
-}
-
-.div .div4 {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  left: 0;
-  top: 0;
-  object-fit: cover;
-  aspect-ratio: 1905.12/911;
-  pointer-events: none;
-}
-
-/* Media Queries for different screen sizes */
-@media (max-width: 1200px) {
-  .div .div3 {
-    font-size: 4.5vw;
-    left: 40%;
-    width: 55%;
-  }
-  
-  .div .rectangle-20 { left: 38%; }
-  .div .rectangle-19 { left: 54%; }
-  .div .rectangle-18 { left: 70%; }
-}
-
-@media (max-width: 768px) {
-  .div .rectangle-15 {
-    width: 100%;
-    height: 40vh;
-    position: relative;
-  }
-  
-  .div .div3 {
-    font-size: 6vw;
-    position: relative;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: auto;
-    padding: 20px;
-    margin-top: 20px;
-  }
-  
-  .div .rectangle-20,
-  .div .rectangle-19,
-  .div .rectangle-18 {
-    position: relative;
-    width: 80%;
-    height: 40vh;
-    left: 10%;
-    margin-bottom: 20px;
-    border-radius: 20px;
-  }
-  
-  .div .rectangle-16,
-  .div .rectangle-17 {
-    display: none;
-  }
-  
-  .div .ellipse-13,
-  .div .ellipse-14,
-  .div .ellipse-15,
-  .div .ellipse-16,
-  .div .ellipse-17,
-  .div .ellipse-18 {
-    display: none;
-  }
-}
-
-@media (max-width: 480px) {
-  .div .div3 {
-    font-size: 8vw;
-    line-height: 1.2em;
-  }
-  
-  .div .rectangle-20,
-  .div .rectangle-19,
-  .div .rectangle-18 {
-    height: 30vh;
-  }
+.main-button:hover {
+  filter: brightness(80%);
+  transform: scale(95%);
 }

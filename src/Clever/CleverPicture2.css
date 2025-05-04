@@ -1,0 +1,124 @@
+.clever-artist-picture2 {
+    background: linear-gradient(90deg, rgba(110, 50, 50, 0.00) 0%, rgba(156, 74, 74, 0.09) 23.85%, rgba(195, 136, 136, 0.29) 100%), #484442;
+    height: 100vw;
+    width: 100vw;
+    overflow: hidden;
+}
+
+.side-menu {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    width: 10%;
+    overflow: visible;
+}
+
+.pins-container {
+    margin-top: 4.75rem;
+    position: absolute;
+    margin-left: 2.81rem;
+}
+
+.back-button-container {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    padding: 0 0 0 0;
+    transform: translateY(2%);
+}
+
+.back-button {
+    width: 100%;
+    height: 100%;
+}
+
+.back-button:hover {
+    transform: scale(1.05);
+}
+
+.clever-main-picture2-container {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    left: 18rem;
+    top: 0.31rem;
+    width: 70%;
+    height: 90%;
+}
+
+.clever-header-text-picture2 {
+    color: #FFE59B;
+    font-family: "Cormorant Infant";
+    font-size: 3.125rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 6.25rem; /* 200% */
+}
+
+.clever-picture2-image {
+    z-index: 101;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.clever-picture2 {
+    border-radius: 1.5rem;
+    width: 100%;
+    height: 100%;
+}
+
+.to-info {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 14%;
+    height: 8%;
+    text-align: center;
+    background-color: #E3E3E3;
+    border-radius: 1.5625rem 0rem 0rem 0rem;
+    
+    color: #000;
+    font-family: Constantia;
+    font-size: 1.875rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 6.25rem; /* 333.333% */
+
+    text-align: center;
+    line-height: 200%;
+
+    cursor: pointer;
+}
+
+.to-info:hover {
+    filter: brightness(80%);
+}
+
+.nav {
+    right: 0;
+    position: absolute;
+    z-index: 102;
+    display: flex;
+    flex-direction: column;
+    gap: 0.31rem
+}
+
+.holst {
+    width: 100vw;
+    height: 100vw;
+    position: absolute;
+    left: 0;
+    top: 0;
+    object-fit: cover;
+    aspect-ratio: 1905.12/911; /* Maintain original aspect ratio */
+    pointer-events: none;
+    opacity: 15%;
+    z-index: 101;
+    max-width: 100vw; /* Ensure it doesn't overflow viewport */
+    max-height: 100vh; /* Ensure it doesn't overflow viewport */
+}
+
+.nav img:hover {
+    filter: brightness(70%);
+}

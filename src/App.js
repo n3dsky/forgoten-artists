@@ -31,6 +31,20 @@ import SorokaPicture1Info from './Soroka/SorokaPicture1Info.jsx';
 import SorokaPicture2 from './Soroka/SorokaPicture2.jsx';
 import SorokaPicture2Info from './Soroka/SorokaPicture2Info.jsx';
 
+import VolkovBio from './Volkov/VolkovBio.jsx';
+import VolkovPictures from './Volkov/VolkovPictures.jsx';
+import VolkovPicture1 from './Volkov/VolkovPicture1.jsx';
+import VolkovPicture1Info from './Volkov/VolkovPicture1Info.jsx';
+import VolkovPicture2 from './Volkov/VolkovPicture2.jsx';
+import VolkovPicture2Info from './Volkov/VolkovPicture2Info.jsx';
+
+import CleverBio from './Clever/CleverBio.jsx';
+import CleverPictures from './Clever/CleverPictures.jsx';
+import CleverPicture1 from './Clever/CleverPicture1.jsx';
+import CleverPicture1Info from './Clever/CleverPicture1Info.jsx';
+import CleverPicture2 from './Clever/CleverPicture2.jsx';
+import CleverPicture2Info from './Clever/CleverPicture2Info.jsx';
+
 function App() {
   return (
     <div className='App'>
@@ -66,6 +80,20 @@ function App() {
          <Route path="forgoten-artists/main-menu/soroka/pictures/picture1/info" element={<SorokaPicture1Info />} />
          <Route path="forgoten-artists/main-menu/soroka/pictures/picture2" element={<SorokaPicture2 />} />
          <Route path="forgoten-artists/main-menu/soroka/pictures/picture2/info" element={<SorokaPicture2Info />} />
+
+         <Route path="forgoten-artists/main-menu/volkov" element={<VolkovBio />} />
+         <Route path="forgoten-artists/main-menu/volkov/pictures" element={<VolkovPictures />} />
+         <Route path="forgoten-artists/main-menu/volkov/pictures/picture1" element={<VolkovPicture1 />} />
+         <Route path="forgoten-artists/main-menu/volkov/pictures/picture1/info" element={<VolkovPicture1Info />} />
+         <Route path="forgoten-artists/main-menu/volkov/pictures/picture2" element={<VolkovPicture2 />} />
+         <Route path="forgoten-artists/main-menu/volkov/pictures/picture2/info" element={<VolkovPicture2Info />} />
+
+         <Route path="forgoten-artists/main-menu/clever" element={<CleverBio />} />
+         <Route path="forgoten-artists/main-menu/clever/pictures" element={<CleverPictures />} />
+         <Route path="forgoten-artists/main-menu/clever/pictures/picture1" element={<CleverPicture1 />} />
+         <Route path="forgoten-artists/main-menu/clever/pictures/picture1/info" element={<CleverPicture1Info />} />
+         <Route path="forgoten-artists/main-menu/clever/pictures/picture2" element={<CleverPicture2 />} />
+         <Route path="forgoten-artists/main-menu/clever/pictures/picture2/info" element={<CleverPicture2Info />} />
 
          
        </Routes>

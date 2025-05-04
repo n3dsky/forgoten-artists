@@ -44,6 +44,18 @@ import CleverPicture1 from './Clever/CleverPicture1.jsx';
 import CleverPicture1Info from './Clever/CleverPicture1Info.jsx';
 import CleverPicture2 from './Clever/CleverPicture2.jsx';
 import CleverPicture2Info from './Clever/CleverPicture2Info.jsx';
+import KuprinBio from './Kuprin/KuprinBio.jsx';
+import KuprinPictures from './Kuprin/KuprinPictures.jsx';
+import KuprinPicture1 from './Kuprin/KuprinPicture1.jsx';
+import KuprinPicture1Info from './Kuprin/KuprinPicture1Info.jsx';
+import KuprinPicture2 from './Kuprin/KuprinPicture2.jsx';
+import KuprinPicture2Info from './Kuprin/KuprinPicture2Info.jsx';
+import SapunovBio from './Sapunov/SapunovBio.jsx';
+import SapunovPictures from './Sapunov/SapunovPictures.jsx';
+import SapunovPicture1 from './Sapunov/SapunovPicture1.jsx';
+import SapunovPicture1Info from './Sapunov/SapunovPicture1Info.jsx';
+import SapunovPicture2 from './Sapunov/SapunovPicture2.jsx';
+import SapunovPicture2Info from './Sapunov/SapunovPicture2Info.jsx';
 
 function App() {
   return (
@@ -95,6 +107,19 @@ function App() {
          <Route path="forgoten-artists/main-menu/clever/pictures/picture2" element={<CleverPicture2 />} />
          <Route path="forgoten-artists/main-menu/clever/pictures/picture2/info" element={<CleverPicture2Info />} />
 
+         <Route path="forgoten-artists/main-menu/kuprin" element={<KuprinBio />} />
+         <Route path="forgoten-artists/main-menu/kuprin/pictures" element={<KuprinPictures />} />
+         <Route path="forgoten-artists/main-menu/kuprin/pictures/picture1" element={<KuprinPicture1 />} />
+         <Route path="forgoten-artists/main-menu/kuprin/pictures/picture1/info" element={<KuprinPicture1Info />} />
+         <Route path="forgoten-artists/main-menu/kuprin/pictures/picture2" element={<KuprinPicture2 />} />
+         <Route path="forgoten-artists/main-menu/kuprin/pictures/picture2/info" element={<KuprinPicture2Info />} />
+
+         <Route path="forgoten-artists/main-menu/sapunov" element={<SapunovBio />} />
+         <Route path="forgoten-artists/main-menu/sapunov/pictures" element={<SapunovPictures />} />
+         <Route path="forgoten-artists/main-menu/sapunov/pictures/picture1" element={<SapunovPicture1 />} />
+         <Route path="forgoten-artists/main-menu/sapunov/pictures/picture1/info" element={<SapunovPicture1Info />} />
+         <Route path="forgoten-artists/main-menu/sapunov/pictures/picture2" element={<SapunovPicture2 />} />
+         <Route path="forgoten-artists/main-menu/sapunov/pictures/picture2/info" element={<SapunovPicture2Info />} />
          
        </Routes>
       </Router>
